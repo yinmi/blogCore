@@ -1,0 +1,25 @@
+﻿@model List<Blog.DateToView.ArticleDate>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="papers">
+    @foreach (var item in Model)
+    { 
+    <h2><a href="/Home/Article?ArticleId= @item.ArticleId">@item.ArticleName</a></h2> 
+        <p class="paperabout">
+            作者：<span class="paperinfo">@item.UserName</span>-
+            时间：<span class="paperinfo">@item.CreateTime</span>
+        </p>
+    }
+
+</div>
+
+
+
+<div class="pages">
+    <a href="/" style="float: left;"><span>prev</span></a>
+    <span></span> / <span></span>
+    <a href="/" style="float: right;"><span>next</span></a>
+</div>
+

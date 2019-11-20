@@ -1,0 +1,18 @@
+﻿@model  Blog.DateToView.ArticleDate
+@{
+    ViewData["Title"] = "Article";
+}
+
+<div class="papers">
+    <h2>@Model.ArticleName</h2>
+    <p>
+        @foreach(var item in Model.Catagory)
+        {
+            <span>@item</span>
+        }
+    </p>
+    <p class="paperabout">
+        @Model.ArticleContent
+    </p>
+</div>
+
